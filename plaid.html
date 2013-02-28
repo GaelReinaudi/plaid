@@ -1,13 +1,35 @@
 <head>
   <title>plaid</title>
+  
 </head>
 
 <body>
-  {{> hello}}
+ {{> theTitle}}
+ {{> hello}}
+ {{> panels}}
+  
+  
 </body>
 
+<template name="panels">
+  {{#each panels}}
+  	{{> panel}}
+  {{/each}}
+</template>
+
+<template name="panel">
+<div  class="panel" style="position: absolute; left:{{x}}px; top:{{y}}px;">
+diiiiiiiiiiiiiv
+</div>
+</template>
+
+
+<template name="theTitle">
+  <div id="theTitle">
+  <h1>{{greeting}}</h1>
+  </div>
+</template>
+
 <template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+  <input type="button" value="Click This !" />
 </template>
