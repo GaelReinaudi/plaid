@@ -34,13 +34,19 @@ if (Meteor.isClient) {
 		
 	});
 	
-	
-  Template.theTitle.greeting = function () {
-	window.innerWidth;
-    return "plaid" + " " + window.innerWidth;
-  };
-
-
+  Meteor.startup(function () {
+	  $(window).resize();
+  });
+  
+  $(window).resize(function() {
+	  var viewWidth = window.innerWidth * 0.95;
+	  var titleWidth = $("#theTitle").width();
+	  var currentFontSize = parseFloat($("#theTitle").css('font-size'));
+	  var newFontsize = currentFontSize * viewWidth / titleWidth;
+	  console.log("titleWidth=" + titleWidth + ", viewWidth=" + viewWidth, ", font=" + currentFontSize);
+	  console.log("newFont=" + newFontsize);
+	  $("#theTitle").css({fontSize: newFontsize});
+  });
 }
 
 if (Meteor.isServer) {

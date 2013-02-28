@@ -5,9 +5,12 @@ h1 {
 	
 } 
 
-div.panel{
+div.panel {
 	height: 50px;
 	display: block;
 	background: #f8e800;
 }
 
+#theTitle {
+	line-height: 0px;
+}
