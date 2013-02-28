@@ -6,6 +6,7 @@ h1 {
 } 
 
 div.panel{
+	height: 50px;
 	display: block;
 	background: #f8e800;
 }
