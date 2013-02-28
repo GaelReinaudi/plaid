@@ -23,16 +23,22 @@ if (Meteor.isClient) {
 			var Speed = 50;
 			var randX = (Math.random() - 0.48) * Speed * 2;
 			var randY = (Math.random() - 0.48) * Speed * 2;
+			
 			Panels.update({_id: this._id}, {$inc: {x: randX}});
-			Panels.update({_id: this._id}, {$inc: {y: randY}});			
+			Panels.update({_id: this._id}, {$inc: {y: randY}});
 			},
 		'click div' : function () {
 			if (typeof console !== 'undefined')
 				console.log("You clicked the div:" + this._id);
 			Panels.remove({_id: this._id});
-		}
+			}
 		
 	});
+
+
+	Template.panel.rendered = function () {
+		this.transition.duration(250).ease("cubic-out");	
+	};
 	
   Meteor.startup(function () {
 	  $(window).resize();
