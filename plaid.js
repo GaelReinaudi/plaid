@@ -17,9 +17,6 @@ if (Meteor.isClient) {
 	
 	Template.panel.events({
 		'mousemove' : function () {
-			// template data, if any, is available in 'this'
-			//if (typeof console !== 'undefined')
-			//	console.log("You moved over the div:" + this._id);
 			var Speed = 50;
 			var randX = (Math.random() - 0.48) * Speed * 2;
 			var randY = (Math.random() - 0.48) * Speed * 2;
