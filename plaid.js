@@ -31,11 +31,6 @@ if (Meteor.isClient) {
 			}
 		
 	});
-
-
-	Template.panel.rendered = function () {
-		this.transition.duration(250).ease("cubic-out");	
-	};
 	
   Meteor.startup(function () {
 	  $(window).resize();
