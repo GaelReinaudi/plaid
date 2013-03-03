@@ -23,6 +23,7 @@ if (Meteor.isClient) {
 			
 			Panels.update({_id: this._id}, {$inc: {x: randX}});
 			Panels.update({_id: this._id}, {$inc: {y: randY}});
+			//d3.select("body").style("background-color", "black");
 			},
 		'click div' : function () {
 			if (typeof console !== 'undefined')
@@ -31,6 +32,16 @@ if (Meteor.isClient) {
 			}
 		
 	});
+
+	Template.panels.rendered = function () {
+		//var Speed = 50;
+        //var randX = (Math.random() - 0.48) * Speed * 2;
+        //var randY = (Math.random() - 0.48) * Speed * 2;
+		//this.transition.duration(250).ease("cubic-out");
+		console.log("Template.panels.rendered called");
+		//this.transition().attr("x", randX).duration(1000).ease("cubic-out");
+		
+	};
 	
   Meteor.startup(function () {
 	  $(window).resize();
