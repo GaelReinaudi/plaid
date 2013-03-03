@@ -5,15 +5,15 @@
 
 <body>
  {{> theTitle}}
-
- 
  {{> panels}}
 </body>
 
 <template name="panels">
-  {{#each panels}}
-	{{> panel}}
-  {{/each}} 
+	{{#constant}}
+	{{#each panels}}
+		{{> panel}}
+	{{/each}}
+	{{/constant}}
 </template>
 
 <template name="panel">
