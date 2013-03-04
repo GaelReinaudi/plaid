@@ -25,12 +25,16 @@ click me
 
 
 <template name="theTitle">
-  <div id="theTitle", style="position: absolute">
-  <h1 >Plaid!</h1>
+  <div id="theTitle">
+  <h1>Plaid!</h1>
  {{> hello}}
+{{> goodbye}}
   </div>
 </template>
 
 <template name="hello">
   <input class="moreButton" type="button" value="more!" />
+</template>
+<template name="goodbye">
+	<input class="clearButton" type="Button" value="clear" />
 </template>

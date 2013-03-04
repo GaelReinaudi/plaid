@@ -13,7 +13,15 @@ if (Meteor.isClient) {
 				console.log("You pressed the button!");
 			Panels.insert({name: "ffffffff", x: 240, y: 240});
 			} 
-	}); 
+	});
+	Template.goodbye.events({
+        'click input' : function () {
+            // template data, if any, is available in 'this'
+            if (typeof console !== 'undefined')
+                console.log("You pressed the clear button!");
+            Panels.remove({}, {});
+            }
+    }); 
 	
 	Template.panel.events({
 		'mousemove' : function () {
