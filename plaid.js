@@ -37,7 +37,7 @@ if (Meteor.isClient) {
 		
 	};
 	
-  Meteor.startup(function () {
+/*  Meteor.startup(function () {
 	  $(window).resize();
   });
   
@@ -49,7 +49,7 @@ if (Meteor.isClient) {
 	  console.log("titleWidth=" + titleWidth + ", viewWidth=" + viewWidth, ", font=" + currentFontSize);
 	  console.log("newFont=" + newFontsize);
 	  $("#theTitle").css({fontSize: newFontsize});
-  });
+  });*/
 }
 
 if (Meteor.isServer) {

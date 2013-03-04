@@ -1,17 +1,29 @@
 /* CSS declarations go here */
-body {background-color:#b0c4de;}
-
-h1 {
-	
+body {
+	margin: 0;
+    border: none;
+    padding: 0;
+    background-image: url('fabric_plaid.png');
+    background-repeat: repeat;
 }
 
-.panel {
+h1 {
+	display: inline-block;
+	font-family: 'Lobster Two', cursive;
+	font-size: 80px;
+	color: white;
+	background-color: #000;
+	text-shadow: 0px 1px 1px #aaa;
+}
+
+/*.panel {
 	position: absolute;
 	height: 30px;
 	padding: 10px;
 	display: block;
 	color: white;
 	background: #478FB2;
+	font-family: "Lado", sans-serif;
 	-moz-box-shadow: 0px 2px 2px #000;
     -webkit-box-shadow: 0px 2px 2px #000;
     box-shadow: 0px 2px 2px #000;
@@ -20,9 +32,87 @@ h1 {
     -o-transition: top 0.5s;
     -ms-transition: top 0.5s;
     transition: top 0.5s;
+	border-radius: 5px;
+}*/
+
+.panel {
+	position: absolute;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c7fdff), color-stop(1, #a9dade) );
+	background:-moz-linear-gradient( center top, #c7fdff 5%, #a9dade 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c7fdff', endColorstr='#a9dade');
+	background-color:#c7fdff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #6dbec9;
+	display:inline-block;
+	color:#6e6e6e;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.panel:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a9dade), color-stop(1, #c7fdff) );
+	background:-moz-linear-gradient( center top, #a9dade 5%, #c7fdff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a9dade', endColorstr='#c7fdff');
+	background-color:#a9dade;
+}.panel:active {
+	position:relative;
+	top:1px;
+}
+
+.moreButton {
+	position: absolute;
+	top: 27px;
+	left: 200px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffd48a), color-stop(1, #faa032) );
+	background:-moz-linear-gradient( center top, #ffd48a 5%, #faa032 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd48a', endColorstr='#faa032');
+	background-color:#ffd48a;
+	-moz-border-radius:29px;
+	-webkit-border-radius:29px;
+	border-radius:29px;
+	border:1px solid #b3b3b3;
+	display:inline-block;
+	color:#707070;
+	font-family:arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:9px 32px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #f0f0f0;
+}.moreButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #faa032), color-stop(1, #ffd48a) );
+	background:-moz-linear-gradient( center top, #faa032 5%, #ffd48a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa032', endColorstr='#ffd48a');
+	background-color:#faa032;
+}.moreButton:active {
+	position:relative;
+	top:1px;
 }
 
 #theTitle {
 	line-height: 0px;
 	z-index: -1;
+}
+.banner {
+	line-height: 0px;
+    z-index: -1;
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    background-image: url('wild_oliva.png');
+    background-repeat: repeat;
+
+    -moz-box-shadow: 0px 3px 10px #888;
+    -webkit-box-shadow: 0px 1px 10px #888;
+    box-shadow: 0px 3px 10px #888;
 }
